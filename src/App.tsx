@@ -1,12 +1,27 @@
 import { multiply } from './utils/math';
 import React, { useEffect } from 'react';
 
+async function fakeLogin(): Promise<string> {
+  return 'User logged in successfully';
+}
+
+async function handleLogin(): Promise<void> {
+  try {
+    const message = await fakeLogin();
+    console.log(message);
+  } catch (err) {
+    console.error('login failed', err);
+  }
+}
+
 const App: React.FC = () => {
   const result = multiply(3, 4);
 
   useEffect(() => {
     // log result once after mount
     console.log('multiply(3,4) =', result);
+    // perform login after mount
+    handleLogin();
   }, [result]);
 
   return (
