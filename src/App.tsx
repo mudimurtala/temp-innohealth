@@ -1,5 +1,8 @@
 import { multiply } from './utils/math';
 import React, { useEffect } from 'react';
+import { student1 } from "./practice/types"
+import Profile from "./components/Profile"
+
 
 async function fakeLogin(): Promise<string> {
   return 'User logged in successfully';
@@ -22,10 +25,15 @@ const App: React.FC = () => {
     console.log('multiply(3,4) =', result);
     // perform login after mount
     handleLogin();
+    // print student1 in requested format
+    console.log(`{ name: "${student1.name}", age: ${student1.age}, isGraduated: ${student1.isGraduated} }`);
   }, [result]);
 
   return (
     <div className="p-10">
+      <Profile name="Mudi" age={22} />
+      <Profile name="Beginner Student" />
+
       <section className="bg-gray-100 p-8 rounded-xl">
         <h1 className="text-2xl font-bold mb-4">Welcome</h1>
         <p className="mb-4">This is my first real Tailwind section.</p>
@@ -37,3 +45,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
