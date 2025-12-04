@@ -1,5 +1,8 @@
 import Profile from "./components/Profile"
 import Button from "./components/ui/Button"
+import { Search, X } from "lucide-react"
+import { motion } from "framer-motion"
+
 
 
 const App: React.FC = () => {
@@ -19,6 +22,20 @@ const App: React.FC = () => {
         <Button size="sm">Small Button</Button>
         <Button variant="success">Success</Button>
       </div>
+
+      <div className="flex items-center gap-2 mt-4">
+        <Search className="w-5 h-5 text-blue-500" />
+        <span>Search Icon Test</span>
+      </div>
+
+      <motion.div
+        className="mt-6 p-4 bg-brand text-white rounded-xl"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+      I animated into view!
+      </motion.div>
 
       <section className="bg-gray-100 p-8 rounded-xl">
         <h1 className="text-2xl font-bold mb-4">Welcome</h1>
