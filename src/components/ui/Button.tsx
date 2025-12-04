@@ -9,6 +9,7 @@ const buttonVariants = cva(
         primary: "bg-brand text-white hover:bg-blue-700",
         danger: "bg-danger text-white hover:bg-red-700",
         outline: "border border-gray-300 bg-white hover:bg-gray-100",
+        success: "bg-success text-white hover:bg-green-700",
       },
       size: {
         sm: "h-8 px-3",

@@ -9,6 +9,7 @@ module.exports = {
     colors: {
       brand: "#2563eb",     // your main color
       danger: "#dc2626",    // error color
+      success: "#16a34a"
     },
     borderRadius: {
       xl: "1rem",

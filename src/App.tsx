@@ -7,7 +7,7 @@ const App: React.FC = () => {
     <div className="p-10">
       <Profile name="Mudi" age={22} />
       <Profile name="Beginner Student" />
-      <div className="bg-brand text-white p-4 rounded-xl">Tailwind Design Token Test</div>
+      <div className="bg-success text-white p-4 rounded-xl">Tailwind Design Token Test</div>
       <div className="text-sm md:text-lg lg:text-2xl">Responsive text</div>
       <button className="bg-brand hover:bg-blue-700 text-white px-4 py-2 rounded">Hover me</button>
 
@@ -17,6 +17,7 @@ const App: React.FC = () => {
         <Button variant="outline">Outline Button</Button>
         <Button size="lg">Big Button</Button>
         <Button size="sm">Small Button</Button>
+        <Button variant="success">Success</Button>
       </div>
 
       <section className="bg-gray-100 p-8 rounded-xl">
